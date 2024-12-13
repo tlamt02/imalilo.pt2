@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    
+    <title>CatPhotoApp</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="https://codetheweb.blog/assets/img/icon2.png">
+       <nav>
+           <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Pricing</a></li>
+               <li><a href="#">Terms of use</a></li>
+               <li><a href="#">Contact</a></li>
+           </ul>
+       </nav>
+   </header>
+    <main>
+      <h1>CatPhotoApp</h1>
+      <section>
+        <h2>Cat Photos</h2>
+        <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p>
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" id="catPhotoUrl" name="catphotourl" placeholder="Cat photo URL" required>
+          <button type="button" id="toggleButton">Hide/Display</button>
+          <br>
+          <img id="catImage" src="" alt="Cat Photo" style="display: none;">
+        </form>
+      </section>
+    </main>
+    <img id="dogImage" src="https://images.dog.ceo/breeds/labradoodle/labradoodle-forrest.jpg" id="test-lab"lt="Dog Image" style="max-width: 500px; border: 1px solid #ccc;">
+ <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const catImage = document.getElementById('catImage');
+        const catPhotoUrlInput = document.getElementById('catPhotoUrl');
+
+        // Toggle hide/display functionality
+        toggleButton.addEventListener('click', () => {
+            // Check if the image source is already set
+            if (!catImage.src || catImage.src === window.location.href) {
+                const url = catPhotoUrlInput.value;
+                if (url.trim() === '') {
+                    alert('Please enter a valid URL!');
+                    return;
+                }
+                // Set the image source
+                catImage.src = url;
+                catImage.style.display = 'block'; // Make sure the image is visible
+            } else {
+                // Toggle the display style
+                catImage.style.display = catImage.style.display === 'none' ? 'block' : 'none';
+            }
+        });
+    </script>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
+
+
+<! --/*scripting option: https://dog.ceo/dog-api/documentation/random
+1. create a form with different survey catagory
+2. do a summation of the points 
+3. transform the points with the matching extracted features 
+4. match the given points with id number of queried api 
+5. toogle async in order to recall the scripted image
+
+
+-->
