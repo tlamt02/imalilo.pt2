@@ -1,0 +1,67 @@
+header img {
+  height: 100px;
+  margin-left: 80px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+}
+
+h1 {
+  font-size: 50px;;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: Impact, serif;
+  margin-left: 30px;
+  border-color: black;
+  border-width: 5px;
+}
+
+body {
+  height: 125vh;
+  background-image: url("nick-fewings-9P1pZy3gwxg-unsplash.jpg");
+  background-size: 100vh;
+  font-family: sans-serif;
+  margin-top: 80px;
+  padding: 50px;
+}
+
+main {
+  color: rgb(9, 47, 218);
+  border-color: blanchedalmond;
+  border-radius: 5px;
+}
+
+footer {
+  font-size: 20px;
+}
+
+header {
+  background-color: rgb(9, 47, 218);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display:flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+}
+
+header * {
+  display: inline;
+  color: darkorchid;
+}
+
+img {
+  max-width: 300px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+footer{
+  color: rgb(27, 144, 223);
+}
