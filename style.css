@@ -7,28 +7,35 @@
 
 body {
     width: 100%;
-    height: 100;
-    background-color: rgb(240, 165, 104);
+    height: 100%;
+    background-image: url('shakti-rajpurohit-ggs-47SjYy0-unsplash.jpg');
     font-family: 'Helvetica', sans-serif;
-    padding: 20px;
-    line-height: 1.6;
-    background-size: cover; /* Ensures the image covers the whole container */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image */
     font-size: 16px;
-    color: rgba(43, 100, 8, 0.856)
+    color: rgba(0, 162, 255, 0.856);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }  
 
-header {
-    background: #332;
-    color: rgb(52, 255, 34);
+  h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-radius: 100px;
+    color: rgba(0, 162, 255, 0.856);
+    margin: 1em auto;
     text-align: center;
-    opacity: 50%;
+  }
+
+header {
+    text-align: center;
 }
 
-
 .section {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .container {
@@ -44,9 +51,9 @@ header {
 }
 
 .portfolio-item {
-    background: rgba(0, 162, 255, 0.856);
-    padding: 5px;
-    border: 1px solid #4b7079;
+    background: rgba(0, 0, 0, 0.856);
+    padding: 15px;
+    border: 1px solid #2daece;
 }
 
 form {
@@ -59,19 +66,13 @@ form {
 
   fieldset {
     padding: 2rem 0;
-    border: 3px solid rgba(161, 23, 224, 0.856);
+    border: 3px solid rgba(0, 162, 255, 0.856);
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 18px;
   }
 
-form input, form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-}
 
 form button {
     background: #333;
@@ -105,7 +106,7 @@ select {
 input, textarea {
     background-color: #332;
     border: 1px solid #0a0a23;
-    color: rgba(0, 255, 51, 0.856);
+    color: rgba(0, 162, 255, 0.856);
     opacity: 50%;
   }
 
@@ -130,19 +131,9 @@ input, textarea {
     display: inline; 
   }
 
-h1 {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-radius: 100px;
-    color: rgba(255, 68, 0, 0.856);
-    margin: 1em auto;
-    text-align: center;
-  }
-
 h2 {
-  color: rgba(255, 68, 0, 0.856);
-  border-color: #0a0a23;
+    color: rgba(0, 162, 255, 0.856);
+    border-color: #0a0a23;
 }
 
 .h2-title {
@@ -154,88 +145,18 @@ label{
   margin-left: 30px;
 }
 
-.cake-container {
-  background: linear-gradient(to bottom, #87ceeb, #ffcccb);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-  width: 100%;
-  margin-top: 30px;
+iframe {
+  margin-top: 20px;
+  width: 600px;
+  height: 450px;
+  border: 2px solid #2daece;
 }
-
-.cake {
-  position: relative;
-  width: 200px;
+.countdown {
   text-align: center;
-}
-
-.layer {
-  width: 100%;
-  height: 50px;
+  font-size: 24px;
   background: #ff69b4;
+  color: white;
+  padding: 20px;
   border-radius: 10px;
-  position: relative;
-  margin-top: -10px;
-}
-
-.chiffon.bottom {
-  width: 20%;
-  height: 10px;
-  background: #040141;
-  border-radius: 10px;
-  position: relative;
-  margin-top: -10px;
-  z-index: -1;
-}
-
-.layer.middle {
-  background: #ff1493;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.layer.bottom {
-  background: #c71585;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: -5px; /* Slight adjustment to ensure proper stacking */
-}
-
-.candles {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: -10px;
-}
-
-.candle {
-  width: 10px;
-  height: 50px;
-  background: #ffe4b5;
-  border-radius: 5px;
-  position: relative;
-}
-
-.flame {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background: radial-gradient(circle, yellow 40%, orange 60%, transparent 80%);
-  border-radius: 50%;
-  transform: translateX(-50%);
-  animation: flicker 0.2s infinite alternate;
-}
-
-@keyframes flicker {
-  0% {
-    transform: translateX(-50%) scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(-50%) scale(1.2);
-    opacity: 1;
-  }
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
