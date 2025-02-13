@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 function updateCountdown() {
-    const birthday = new Date("2025-02-13T21:00:00"); // Set your birthday date
+    const birthday = new Date("2025-02-14T00:00:00"); // Set your birthday date
     const now = new Date();
     
     if (now > birthday) {
