@@ -14,7 +14,7 @@ function updateCountdown() {
     const now = new Date();
     
     if (now > birthday) {
-        birthday.setFullYear(now.getFullYear() + 1);
+        birthday.setFullYear(now.getFullYear());
     }
     
     const diff = birthday - now;
